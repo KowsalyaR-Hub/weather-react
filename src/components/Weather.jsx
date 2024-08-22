@@ -24,7 +24,7 @@ const Weather = () => {
     const [weatherImage, setWeatherImage] = useState('');
 
     const getWeather = async () => {
-        const API_KEY = '';
+        const API_KEY = process.env.REACT_APP_API_KEY;
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
         try {
             if (!city.trim()) {
